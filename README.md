@@ -1,2 +1,2 @@
 # Tasks-Manager
-Web Application to monitor your tasks 
+Web Application to monitor your tasks and make you more proactive
