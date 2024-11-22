@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <script src="JS/script.js" type="module" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"
+      defer
+    ></script>
+    <title>Tasks</title>
+  </head>
+  <body>
+    <main>
+      <img
+        id="logo"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaPDdSaK-bgA5Ye6Du39dR54r5T1AbYx7NA&s"
+        alt="task-img"
+      />
+      <form id="form">
+        <!-- Form serve pra criar um formulario que envia informacoes dadas pelo user -->
+        <input id="input-item" type="text" placeholder="Type your new task" />
+        <button id="button-save-item" type="submit">Save</button>
+      </form>
+      <div id="lists">
+        <div id="tasks-to-do">
+          <h2 id="list-title">Tasks</h2>
+          <hr />
+          <ul id="task-list">
+            <p id="warning-empty-list">
+              Your task list is now empty! Please type something to add your new
+              task!
+            </p>
+          </ul>
+        </div>
+        <div id="tasks-done">
+          <h2 id="list-title">Done</h2>
+          <hr />
+          <ul id="task-list-done"></ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

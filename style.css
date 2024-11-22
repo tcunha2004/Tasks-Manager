@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+:root {
+  --blue-gradient: linear-gradient(180deg, #1c099a 0%, rgb(13, 5, 88) 100%);
+  --blue: #1d02d0;
+  --white: #ffffff;
+  --font: "Lexend", sans-serif;
+}
+
+body {
+  background: var(--blue-gradient);
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background-color: var(--white);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  width: 70vw;
+  padding: 5vh 5vw 5vh 5vw;
+
+  font-family: var(--font);
+}
+
+#logo {
+  width: 15%;
+  position: relative;
+  left: 43%;
+  top: 0%;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+#form input,
+form button {
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: text;
+}
+
+#form button {
+  cursor: pointer;
+}
+
+#form input {
+  width: 50vw;
+  height: 35px;
+  text-align: center;
+}
+
+#form button {
+  width: 12vw;
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+#lists {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#tasks-to-do {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+#tasks-done {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+#list-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 40px;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 3px dotted rgb(0, 0, 98);
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+#task-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+#warning-empty-list {
+  text-align: center;
+}
+
+#task-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.item-name-container {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.item-name {
+  width: 80%;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.item-edit-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: -5%;
+}
+
+.item-edit-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.item-edit-img {
+  width: 13px;
+  height: 13px;
+}
+
+.item-date {
+  font-size: 0.8rem;
+  margin-left: 2.8vw;
+  text-align: center;
+}
+
+/* AFTER EVENTS */
+
+#task-list-done {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+#task-list-done li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.checked p {
+  text-decoration: line-through;
+}
+
+@media (max-width: 1000px) {
+  #lists {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #tasks-to-do,
+  #tasks-done {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  #form button {
+    width: 20vw;
+  }
+
+  #tasks-to-do,
+  #tasks-done {
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px) {
+  .item-name {
+    font-size: 15px;
+    width: 74%;
+  }
+  .item-date {
+    font-size: 11px;
+  }
+  .item-edit-container {
+    right: -8%;
+  }
+}
