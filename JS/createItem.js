@@ -70,7 +70,7 @@ export function createItem(itemInputName, taskList) {
       // Coordinates of CheckBox
       const positioning = checkBox.getBoundingClientRect();
       const x = positioning.left / window.innerWidth;
-      const y = positioning.top / window.innerHeight;
+      const y = positioning.top / document.documentElement.scrollHeight;
 
       console.log(x);
       console.log(y);
